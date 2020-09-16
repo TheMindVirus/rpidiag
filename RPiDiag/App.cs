@@ -85,18 +85,28 @@ namespace RPiDiag
 
         private void serialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            byte[] buffer = new byte[255];
-            serialPort.Read(buffer, 0, serialPort.BytesToRead);
-            Invoke(print, new object[] { Encoding.Default.GetString(buffer, 0, buffer.Length) });
+            try
+            {
+                byte[] buffer = new byte[255];
+                serialPort.Read(buffer, 0, serialPort.BytesToRead);
+                Invoke(print, new object[] { Encoding.Default.GetString(buffer, 0, buffer.Length) });
+            }
+            catch { }
         }
 
         private void serialTimer_Tick(object sender, EventArgs e)
         {
             try
             {
-                serialPort.PortName = settings.portBox.Text;
-                serialPort.BaudRate = int.Parse(settings.rateBox.Text);
-                if (!serialPort.IsOpen) { serialPort.Open(); }
+                if ((serialPort.PortName != settings.portBox.Text)
+                || ((serialPort.BaudRate != int.Parse(settings.rateBox.Text)))
+                || (!serialPort.IsOpen))
+                {
+                    try { serialPort.Close(); } catch { }
+                    serialPort.PortName = settings.portBox.Text;
+                    serialPort.BaudRate = int.Parse(settings.rateBox.Text);
+                    serialPort.Open();
+                }
             }
             catch { }
         }

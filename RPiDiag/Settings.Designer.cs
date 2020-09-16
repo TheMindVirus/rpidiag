@@ -113,10 +113,12 @@
             this.Controls.Add(this.transparencyBox);
             this.Controls.Add(this.rateBox);
             this.Controls.Add(this.portBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Settings";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Settings";
             this.Shown += new System.EventHandler(this.Settings_Shown);
             this.ResumeLayout(false);

@@ -129,7 +129,9 @@
             this.Controls.Add(this.inputBox);
             this.Controls.Add(this.outputBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(700, 300);
             this.Name = "App";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Raspberry Pi Diagnostics";
             this.Shown += new System.EventHandler(this.App_Shown);
             this.SizeChanged += new System.EventHandler(this.App_SizeChanged);
