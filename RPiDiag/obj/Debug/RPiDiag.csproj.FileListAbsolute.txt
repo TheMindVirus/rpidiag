@@ -1,0 +1,11 @@
+C:\Users\cotaa\Documents\Visual Studio 2019\Projects\RPiDiag\RPiDiag\bin\Debug\RPiDiag.exe.config
+C:\Users\cotaa\Documents\Visual Studio 2019\Projects\RPiDiag\RPiDiag\bin\Debug\RPiDiag.exe
+C:\Users\cotaa\Documents\Visual Studio 2019\Projects\RPiDiag\RPiDiag\bin\Debug\RPiDiag.pdb
+C:\Users\cotaa\Documents\Visual Studio 2019\Projects\RPiDiag\RPiDiag\obj\Debug\RPiDiag.csprojAssemblyReference.cache
+C:\Users\cotaa\Documents\Visual Studio 2019\Projects\RPiDiag\RPiDiag\obj\Debug\RPiDiag.Properties.Resources.resources
+C:\Users\cotaa\Documents\Visual Studio 2019\Projects\RPiDiag\RPiDiag\obj\Debug\RPiDiag.csproj.GenerateResource.cache
+C:\Users\cotaa\Documents\Visual Studio 2019\Projects\RPiDiag\RPiDiag\obj\Debug\RPiDiag.csproj.CoreCompileInputs.cache
+C:\Users\cotaa\Documents\Visual Studio 2019\Projects\RPiDiag\RPiDiag\obj\Debug\RPiDiag.exe
+C:\Users\cotaa\Documents\Visual Studio 2019\Projects\RPiDiag\RPiDiag\obj\Debug\RPiDiag.pdb
+C:\Users\cotaa\Documents\Visual Studio 2019\Projects\RPiDiag\RPiDiag\obj\Debug\RPiDiag.App.resources
+C:\Users\cotaa\Documents\Visual Studio 2019\Projects\RPiDiag\RPiDiag\obj\Debug\RPiDiag.Settings.resources
