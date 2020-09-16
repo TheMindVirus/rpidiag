@@ -8,3 +8,4 @@ C:\Users\cotaa\Documents\Visual Studio 2019\Projects\RPiDiag\RPiDiag\bin\Release
 C:\Users\cotaa\Documents\Visual Studio 2019\Projects\RPiDiag\RPiDiag\bin\Release\RPiDiag.pdb
 C:\Users\cotaa\Documents\Visual Studio 2019\Projects\RPiDiag\RPiDiag\obj\Release\RPiDiag.exe
 C:\Users\cotaa\Documents\Visual Studio 2019\Projects\RPiDiag\RPiDiag\obj\Release\RPiDiag.pdb
+C:\Users\cotaa\Documents\Visual Studio 2019\Projects\RPiDiag\RPiDiag\obj\Release\RPiDiag.csprojAssemblyReference.cache

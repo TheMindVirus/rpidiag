@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
+using System.Runtime.InteropServices;
 
 namespace RPiDiag
 {
@@ -17,14 +18,23 @@ namespace RPiDiag
         public Settings settings = new Settings();
         public const int WM_PAINT = 0x000F;
 
-        public static FontFamily fontFamily = new FontFamily("Orbitron");
-        public static Font font = new Font(fontFamily, 42, FontStyle.Bold, GraphicsUnit.Pixel);
+        public static FontFamily headingText = LoadFont(Properties.Resources.orbitron);
+        public static FontFamily normalText = LoadFont(Properties.Resources.sansserif);
+        public static FontFamily consoleText = LoadFont(Properties.Resources.consolas);
+        public static Font heading = new Font(headingText, 42, FontStyle.Bold, GraphicsUnit.Pixel);
         public static Brush textColour = new SolidBrush(Color.FromArgb(255, 255, 255, 255));
         public static Brush fillColour = new SolidBrush(Color.FromArgb(85, 255, 0, 127));
+        public static FontFamily LoadFont(byte[] resource)
+        {
+            PrivateFontCollection customFont = new PrivateFontCollection();
+            IntPtr buffer = Marshal.AllocCoTaskMem(resource.Length);
+            Marshal.Copy(resource, 0, buffer, resource.Length);
+            customFont.AddMemoryFont(buffer, resource.Length);
+            return customFont.Families[0];
+        }
 
         public delegate void Print(string message);
         public static Print print;
-
         private void _print(string message)
         {
             outputBox.AppendText(message);
@@ -34,7 +44,6 @@ namespace RPiDiag
         public App()
         {
             InitializeComponent();
-            settingsButton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
         }
 
         private void App_Shown(object sender, EventArgs e)
@@ -48,7 +57,7 @@ namespace RPiDiag
             e.Graphics.Clear(Color.Transparent);
             e.Graphics.FillRectangle(fillColour, ClientRectangle);
             e.Graphics.TextRenderingHint = TextRenderingHint.AntiAlias;
-            e.Graphics.DrawString("Raspberry Pi Diagnostics", font, textColour, 12, 8);
+            e.Graphics.DrawString("Raspberry Pi Diagnostics", heading, textColour, 12, 8);
         }
 
         [System.Security.Permissions.PermissionSet(System.Security.Permissions.SecurityAction.Demand, Name = "FullTrust")]
