@@ -41,7 +41,7 @@
             // serialPort
             // 
             this.serialPort.BaudRate = 115200;
-            this.serialPort.PortName = "COM3";
+            this.serialPort.PortName = "COM1";
             this.serialPort.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort_DataReceived);
             // 
             // outputBox
@@ -51,7 +51,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.outputBox.BackColor = System.Drawing.Color.Black;
             this.outputBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.outputBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputBox.Font = new System.Drawing.Font(consoleText, 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outputBox.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.outputBox.Location = new System.Drawing.Point(20, 70);
             this.outputBox.Multiline = true;
@@ -66,7 +66,7 @@
             this.inputBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.inputBox.BackColor = System.Drawing.Color.Black;
             this.inputBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inputBox.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputBox.Font = new System.Drawing.Font(consoleText, 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputBox.ForeColor = System.Drawing.Color.White;
             this.inputBox.Location = new System.Drawing.Point(20, 392);
             this.inputBox.Name = "inputBox";
@@ -81,7 +81,7 @@
             this.sendButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.sendButton.FlatAppearance.BorderSize = 2;
             this.sendButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sendButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sendButton.Font = new System.Drawing.Font(normalText, 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sendButton.ForeColor = System.Drawing.Color.White;
             this.sendButton.Location = new System.Drawing.Point(676, 392);
             this.sendButton.Name = "sendButton";
@@ -102,14 +102,14 @@
             // 
             this.settingsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.settingsButton.BackColor = System.Drawing.Color.Transparent;
-            this.settingsButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.settingsButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(0, 255, 255, 255);
             this.settingsButton.FlatAppearance.BorderSize = 0;
             this.settingsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.settingsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settingsButton.Font = new System.Drawing.Font(normalText, 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settingsButton.ForeColor = System.Drawing.Color.White;
-            this.settingsButton.Image = ((System.Drawing.Image)(resources.GetObject("settingsButton.Image")));
+            this.settingsButton.Image = global::RPiDiag.Properties.Resources.hamburger;
             this.settingsButton.Location = new System.Drawing.Point(745, 15);
             this.settingsButton.Name = "settingsButton";
             this.settingsButton.Size = new System.Drawing.Size(40, 40);
